@@ -19,3 +19,26 @@ println(m2)
 println()
 ////////////////////////////////////////////////////////////////////
 
+val wordCount1 = collection.mutable.Map[String,Int]()
+
+val words = Array("hello","world","earth","hello","alien","world")
+
+words.foreach {
+  w => if (wordCount1.contains(w)) wordCount1(w)+=1 else wordCount1(w) = 1
+}
+
+println(wordCount1)
+
+println()
+////////////////////////////////////////////////////////////////////
+
+var wordCount2 = Map[String,Int]()
+
+words.foreach {w =>
+  wordCount2 = wordCount2 + (if (wordCount2.contains(w)) (w,wordCount2(w)+1) else (w,1))
+}
+
+println(wordCount2)
+
+println()
+////////////////////////////////////////////////////////////////////
