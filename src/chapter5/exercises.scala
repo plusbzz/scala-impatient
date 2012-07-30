@@ -25,7 +25,7 @@ class BankAccount {
 
 println()
 ////////////////////////////////////////////////////////////////////
-
+// Ex 3
 class Time1(val hrs:Int, val mins:Int) {
   assert(hrs >= 0 && hrs <= 23)
   assert(mins >= 0 && mins <= 59)
@@ -45,7 +45,7 @@ println(t1.before(new Time1(3,25)))
 println(t1.before(new Time1(1,25)))
 println()
 ////////////////////////////////////////////////////////////////////
-
+// Ex 4
 class Time2(val hrs:Int, val mins:Int) {
   assert(hrs >= 0 && hrs <= 23)
   assert(mins >= 0 && mins <= 59)
@@ -63,7 +63,7 @@ println(t2.before(new Time2(1,25)))
 
 println()
 ////////////////////////////////////////////////////////////////////
-// The following 3 classes should be equivalent
+//Ex 10: The following 3 classes should be equivalent
 
 class Employee1(val name:String, var salary:Double) {
   def this() {this("John Doe",0.0)}
@@ -79,8 +79,16 @@ class Employee3(val name:String = "John Doe", var salary:Double = 0.0) {
 
 println()
 ////////////////////////////////////////////////////////////////////
-
-
+// Ex 8
+class Car(val manufacturer:String, val model:String, val year:Int = 0){
+  var plate = ""
+  def this(manufacturer:String, model:String, year:Int, plate:String = ""){
+    this(manufacturer,model)
+    this.plate = plate
+  }
+}
+println()
+////////////////////////////////////////////////////////////////////
 
 
 
